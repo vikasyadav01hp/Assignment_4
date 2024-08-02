@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Permission</title>
+    <style>
+        .child {
+            display: none;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="permissionForm">
+        <div>
+            <label for="userSelect">Manage Permission</label>
+            <select id="userSelect" onchange="toggleVisibility()">
+                <option value="">None</option>
+                <option value="dropdown">Drop Down</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label><input type="checkbox" name="parent" class="parent">Property</label>
+            <div class="child">
+                <label><input type="checkbox" name="child1">Edit Property</label><br>
+                <label><input type="checkbox" name="child2">Remove Property</label><br>
+                <label><input type="checkbox" name="child3">Add Property</label><br>
+            </div>
+        </div>
+
+        <div>
+            <label><input type="checkbox" name="parent" class="parent">Testimonial</label>
+            <div class="child">
+                <label><input type="checkbox" name="child4">Add</label><br>
+                <label><input type="checkbox" name="child5">Remove</label><br>
+                <label><input type="checkbox" name="child6">View</label><br>
+                <label><input type="checkbox" name="child7">Edit</label><br>
+            </div>
+        </div>
+
+        <div>
+            <label><input type="checkbox" name="parent" class="parent">Users</label>
+            <div class="child">
+                <label><input type="checkbox" name="child8">Edit User</label><br>
+                <label><input type="checkbox" name="child9">View User List</label><br>
+                <label><input type="checkbox" name="child10">Add User</label><br>
+            </div>
+        </div>
+
+        <div>
+            <label><input type="checkbox" name="parent" class="parent">Membership</label>
+            <div class="child">
+                <label><input type="checkbox" name="child11">Edit Membership</label><br>
+                <label><input type="checkbox" name="child12">Remove Membership</label><br>
+                <label><input type="checkbox" name="child13">Add Membership</label><br>
+            </div>
+        </div>
+        <button type="button" onclick="submitPermissions()">Submit</button>
+    </form>
+</body>
+<script src="index.js"></script>
+</html>
