@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Manage Permission</title>
     <style>
         .child {
             margin-left: 20px;
         }
+        #permissionForm {
+         display: none;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <form id="permissionForm">
+    <div>Manage Permission
+        <select onchange="showDiv('permissionForm', this)">
+            <option value="0">None</option>
+            <option value="1">Drop Down</option>
+        </select>
+    </div>
+    <form id="permissionForm" >
         <div>
-            Manage Permission
-            <select>
-                <option value="">None</option>
-                <option value="dropdown">Drop Down</option>
-            </select>
-        </div>
-        <br>
-        <div id="checklist" onclick="{childCheckByParent()}">
+            <div class="parent"><input type="checkbox" />Property</div>
             <div>
-                <input type="checkbox" id="parent">Property
-                <div class="child">
-                    <input  type="checkbox">Edit Property<br>
-                    <input  type="checkbox">Remove Property<br>
-                    <input  type="checkbox">Add Property<br>
-                </div>
+                <ul class="child">
+                    <label><input type="checkbox" />Edit Property</label><br>
+                    <label><input type="checkbox" />Remove Property</label><br>
+                    <label><input type="checkbox" />Add Property</label><br>
+                </ul>
             </div>
-    
+            <div class="parent"><input type="checkbox" />Testimonial</div>
             <div>
-                <input type="checkbox" id="parent">Testimonial
-                <div class="child">
-                    <input  type="checkbox">Add<br>
-                    <input  type="checkbox">Remove<br>
-                    <input  type="checkbox">View<br>
-                    <input  type="checkbox">Edit<br>
-                </div>
+                <ul class="child">
+                    <label><input type="checkbox" />Add</label><br>
+                    <label><input type="checkbox" />Remove</label><br>
+                    <label><input type="checkbox" />View</label><br>
+                    <label><input type="checkbox" />Edit</label><br>
+                </ul>
             </div>
-    
+            <div class="parent"><input type="checkbox" />Users</div>
             <div>
-                <input type="checkbox" id="parent">Users
-                <div class="child">
-                    <input type="checkbox">Edit User<br>
-                    <input type="checkbox">View User List<br>
-                    <input type="checkbox">Add User<br>
-                </div>
+                <ul class="child">
+                    <label><input type="checkbox" />Edit User</label><br>
+                    <label><input type="checkbox" />View User List</label><br>
+                    <label><input type="checkbox" />Add User</label><br>
+                </ul>
             </div>
-    
+            <div class="parent"><input type="checkbox" />Membership</div>
             <div>
-                <input type="checkbox" id="parent">Membership onclick="{childCheckByParent()}/>
-                <div class="child">
-                    <input type="checkbox">Edit Membership<br>
-                    <input type="checkbox">Remove Membership<br>
-                    <input type="checkbox">Add Membership<br>
-                </div>
+                <ul class="child">
+                    <label><input type="checkbox" />Edit Membership</label><br>
+                    <label><input type="checkbox" />Remove Membership</label><br>
+                    <label><input type="checkbox" />Add Membership</label><br>
+                </ul>
             </div>
         </div>
         <button type="button">Submit</button>
     </form>
+
 </body>
 <script src="index.js"></script>
+
 </html>
