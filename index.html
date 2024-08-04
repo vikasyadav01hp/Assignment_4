@@ -4,58 +4,60 @@
     <title>Manage Permission</title>
     <style>
         .child {
-            display: none;
             margin-left: 20px;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <form id="permissionForm">
         <div>
-            <label for="userSelect">Manage Permission</label>
-            <select id="userSelect" onchange="toggleVisibility()">
+            Manage Permission
+            <select>
                 <option value="">None</option>
                 <option value="dropdown">Drop Down</option>
             </select>
         </div>
         <br>
-        <div>
-            <label><input type="checkbox" name="parent" class="parent">Property</label>
-            <div class="child">
-                <label><input type="checkbox" name="child1">Edit Property</label><br>
-                <label><input type="checkbox" name="child2">Remove Property</label><br>
-                <label><input type="checkbox" name="child3">Add Property</label><br>
+        <div id="checklist" onclick="{childCheckByParent()}">
+            <div>
+                <input type="checkbox" id="parent">Property
+                <div class="child">
+                    <input  type="checkbox">Edit Property<br>
+                    <input  type="checkbox">Remove Property<br>
+                    <input  type="checkbox">Add Property<br>
+                </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="parent">Testimonial
+                <div class="child">
+                    <input  type="checkbox">Add<br>
+                    <input  type="checkbox">Remove<br>
+                    <input  type="checkbox">View<br>
+                    <input  type="checkbox">Edit<br>
+                </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="parent">Users
+                <div class="child">
+                    <input type="checkbox">Edit User<br>
+                    <input type="checkbox">View User List<br>
+                    <input type="checkbox">Add User<br>
+                </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="parent">Membership onclick="{childCheckByParent()}/>
+                <div class="child">
+                    <input type="checkbox">Edit Membership<br>
+                    <input type="checkbox">Remove Membership<br>
+                    <input type="checkbox">Add Membership<br>
+                </div>
             </div>
         </div>
-
-        <div>
-            <label><input type="checkbox" name="parent" class="parent">Testimonial</label>
-            <div class="child">
-                <label><input type="checkbox" name="child4">Add</label><br>
-                <label><input type="checkbox" name="child5">Remove</label><br>
-                <label><input type="checkbox" name="child6">View</label><br>
-                <label><input type="checkbox" name="child7">Edit</label><br>
-            </div>
-        </div>
-
-        <div>
-            <label><input type="checkbox" name="parent" class="parent">Users</label>
-            <div class="child">
-                <label><input type="checkbox" name="child8">Edit User</label><br>
-                <label><input type="checkbox" name="child9">View User List</label><br>
-                <label><input type="checkbox" name="child10">Add User</label><br>
-            </div>
-        </div>
-
-        <div>
-            <label><input type="checkbox" name="parent" class="parent">Membership</label>
-            <div class="child">
-                <label><input type="checkbox" name="child11">Edit Membership</label><br>
-                <label><input type="checkbox" name="child12">Remove Membership</label><br>
-                <label><input type="checkbox" name="child13">Add Membership</label><br>
-            </div>
-        </div>
-        <button type="button" onclick="submitPermissions()">Submit</button>
+        <button type="button">Submit</button>
     </form>
 </body>
 <script src="index.js"></script>
