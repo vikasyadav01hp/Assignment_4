@@ -7,7 +7,6 @@ $(".parent input").on('click',function(){
      nextli.each(function(){
        $(this).children().prop('checked',true);
      });
-    
   }
   else{
     console.log('parent un checked');
@@ -30,12 +29,12 @@ $(".child input").on('click',function(){
   }
   else{
     console.log('child unchecked');
-       var status=true;
-     sibblingsli.each(function(){
+      var status=true;
+      sibblingsli.each(function(){
        console.log('sibb');
        if($(this).children().prop('checked')) status=false;
      });
-       if(status) parentinput.prop('checked',false);
+       if(status) parentinput.prop('checked',false);   // uncheck the parent if all child is unchecked
   }
 });
 function showDiv(permissionForm, element) {
